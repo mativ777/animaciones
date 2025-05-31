@@ -1,0 +1,141 @@
+/*decoracion_de_ariva:espada-arco-flecha-esqueleto-enderman*/
+.espada_decoracion {
+    position: absolute;
+    left: 56.5em;
+    bottom: 55vh;
+    z-index: 1;
+    animation: decoracion 5s ease alternate-reverse ;
+}
+
+.arco{
+    position: absolute;
+    left: 62.1em;
+    top: 65vh;
+    z-index: 1;
+}
+
+.flecha{
+    position: absolute;
+    top: 70vh;
+    right: 50.5em;
+    z-index: 0;
+    animation: flecha 5s ease;
+}
+
+.esqueleto-decoracion{
+    position: absolute;
+    top: 10vh;
+    animation: decoracion 5s ease alternate-reverse;
+}
+
+.enderman-decoracion{
+    transform: scaleX(-1);
+    position: absolute;
+    top: 50vh;
+    animation: decoracion2 5s ease alternate-reverse ;
+    
+}
+/*decoracion_de_ariva-fin*/
+
+/*decoracion_de_abajo:espada-creeper-arco-flecha-zombi*/
+
+.decoracion-de_espada-abajo{
+    transform: scaleX(-1);
+    position: absolute;
+    left: 0em;
+    animation: decoracion2 5s ease alternate-reverse;
+}
+
+.decoracion-de_creeper_abajo{
+    position: absolute;
+    right: 0em;
+    top: 40em;
+    animation: decoracion 5s ease alternate-reverse;
+}
+
+.decoracion-de_zombi-abajo{
+    position: absolute;
+    top: 55em;
+    animation: decoracion 5s ease alternate-reverse;
+}
+
+.decoracion-arco_abajo{
+    position: absolute;
+    right: 0em;
+    top: 59em;
+    z-index: 1;
+}
+
+.decoracion-flecha_abajo{
+position: absolute;
+top: 60.5em;
+right: 50.5em;
+z-index: 0;
+animation: flecha_abajo 5s ease;
+}
+
+/*decoracion_de_abajo-fin*/
+
+/*decoracion*/
+@keyframes decoracion {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes decoracion2 {
+    0%{
+        opacity: 1;
+        transform: scaleX(-1);
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes flecha {
+    0% {
+		opacity: 1;
+		transform: translateX(850px);
+	}
+
+    50%{
+        transform: translateX(820px);
+    }
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes flecha_abajo {
+    0% {
+        opacity: 1;
+        transform: translateX(850px);
+    }
+
+    50%{
+        transform: translateX(820px);
+    }
+
+
+
+	100% {
+		opacity: 1;
+		transform: translateX(-0px);
+	}
+}
+/*decoracion-fin*/

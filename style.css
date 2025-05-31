@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+.palabra{
+    font-size: 14px;
+    font-family: "Nunito", sans-serif;
+    color: white;
+}
+
+body{
+    background-color: #0c0218f1;
+}
+/*header*/
+header{
+    background:  #390a7b ;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.head{
+    display: flex;
+    justify-content: space-around;
+}
+/*header-fin*/
+
+/*logo*/
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo_izquierda{
+    animation: animacion-izquierdo 5s ease 1s;
+    transform: translate(-50px);
+}
+
+.logo_derecha{
+    animation: animacion-derecho 5s ease 1s;
+    transform: translate(-90px);
+}
+/*logo-fin*/
+
+/*conectores*/
+.almacen_contenedores{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.conectores{
+    background-color:#0c0218f1;
+    border: #AE0CBE 3px solid;
+    color: white;
+    display: inline-block;
+    padding: 3px 3px;
+    text-decoration: none;
+    animation: animacion-links 20s ease 1;
+    font-size: 80%;
+    border-radius: 5px;
+}
+/*conectores-fin*/
+
+/*main*/
+main{
+    background-color: #0c0218f1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4 , 1fr) ;
+    grid-template-areas:"creeper creeper" 
+                        "zombi zombi "
+                        "enderman enderman"
+                        "esqueleto esqueleto";
+}
+/*main-fin*/
+
+/*creeper*/
+.creeper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: creeper;
+    z-index: 1;
+}
+
+.imagenes-creeper{
+    
+    margin-top: auto;
+    
+    animation: animacion-derecho-de-mosustros 5s ease ;
+}
+
+#palabra-1_creeper{
+    color: white;
+    border: aquamarine solid 5px;
+    
+    animation: animacion-izquierdo-de-mosustros 5s ease;
+}
+/*creeper-fin*/
+
+/*zombi*/
+.zombi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: zombi;
+    z-index: 1;
+}
+
+.imagen-zombi{
+    margin-top: 10px;
+
+    animation: animacion-izquierdo-de-mosustros 5s ease ;
+}
+
+#palabra-1_zombi{
+    color: white;
+    border: aqua solid 5px;
+    
+    animation: animacion-derecho-de-mosustros 5s ease;
+}
+/*zombi-fin*/
+
+/*enderman*/
+.enderman{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: enderman;
+    z-index: 1;
+}
+
+.imagen-enderman{
+    animation: animacion-derecho-de-mosustros 5s ease;
+}
+
+#palabra_enderman{
+    color: white;
+    border: aqua solid 5px ;
+
+    animation:animacion-izquierdo-de-mosustros 5s ease ;
+}
+/*enderman-fin*/
+
+/*esqueleto*/
+.esqueleto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: esqueleto;
+    gap: 20px;
+    z-index: 1;
+}
+
+.imagen-esqueleto{
+    animation:animacion-izquierdo-de-mosustros 5s ease;
+}
+
+#palabra_esqueleto{
+    color: white;
+    border: aqua solid 5px;
+    
+    animation: animacion-derecho-de-mosustros 5s ease;
+}
+
+/*esqueleto-fin*/
+
+/*footoer*/
+footer{
+    background:  #390a7b ;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.redes_personal {    
+    width:20px ;
+    margin: 5px;
+    text-decoration: none;
+    animation: animacion-links 20s ease 1;
+}
+
+#Copyright{
+    animation: animacion-links 20s ease 1;
+}
+
+
+/*animacion de logo*/
+@keyframes animacion-derecho {
+    from{
+        transform: translateX(-500px);
+    }
+    to{
+        transform: translateX(-90px);
+        
+    }
+}
+
+@keyframes animacion-izquierdo {
+    from{
+        transform: translateX(1000px);
+    }
+    to{
+        transform: translateX(-50px);
+    }
+}
+/*animacion_de_logo-fin*/
+
+/*animacion_de_link*/
+@keyframes animacion-links{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/*animacion_de_link-fin*/
+
+/*animacion_de_mosustro-y-texto*/
+@keyframes animacion-derecho-de-mosustros {
+    from{
+        transform: translateX(-500px);
+    }
+    to{
+        transform: translateX(0);
+        
+    }
+}
+
+
+@keyframes animacion-izquierdo-de-mosustros {
+    from{
+        transform: translateX(1000px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+/*animacion_de_mosustro-fin*/
+
